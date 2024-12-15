@@ -8,4 +8,5 @@ while (countNumber <= 20) {
     sum += countNumber;
     countNumber++
     console.log(sum);
+    return sum;
 }
