@@ -5,4 +5,15 @@
 */
 
 // your code
-let sum
+let sum = 0;
+
+let countNumber = 1;
+while (countNumber <= 20) {
+  if (countNumber % 2 === 0) {
+    console.log("четное число");
+  } else {
+    sum += countNumber
+    console.log(sum);
+  }
+  countNumber++
+}
