@@ -14,9 +14,9 @@ includesElement([1, 2, 3], 2)  // должен вернуть `true`.
 */
 
 function includesElement(array, element) {
-    let result = "соввадений нет ";
+    let result = false;
     for(let i = 0; i < array.length; i++){        
-        result = element === array[i] ? "совпадение" : result;
+        result = element === array[i] ? true : result;
     }
     return result;
 }
