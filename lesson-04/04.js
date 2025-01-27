@@ -15,7 +15,7 @@
 function doubleEachCharacter(array) {
     let stroka = '';
     for (let i = 0; i < array.length; i++) {
-        stroka = array[i] + array[i];
+        stroka = stroka + array[i] + array[i];
     }
     return stroka;
 }
