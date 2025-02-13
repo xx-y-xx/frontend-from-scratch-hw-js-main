@@ -18,8 +18,10 @@ const game = {
   addResource() {}
 }
 function addResource(typeResource, amount) {
- return ( !typeResource in game.resources) ? console.log("Invalid resource") : game.resources[typeResource] += amount
+  const chek = (!(typeResource in game.resources)) ? console.log("Invalid resource") : game.resources[typeResource] += amount;
+  return chek;
 }
 
 console.log(addResource('gold', 60));
 console.log(addResource('lumber', 90));
+console.log(addResource('stone', 12));
