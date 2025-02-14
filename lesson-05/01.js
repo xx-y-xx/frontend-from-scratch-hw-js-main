@@ -15,13 +15,25 @@ const game = {
     gold: 250,
     lumber: 100,
   },
-  addResource() {}
+  addResource(typeResource, amount) {
+    if (typeof typeResource !== 'string' || !(typeResource in game.resources)){
+      console.log("Invalid resource");
+    } else {
+      typeResource === 'gold' ? game.resources.gold += amount : game.resources.lumber += amount
+    }
+  }
 }
-function addResource(typeResource, amount) {
-  const chek = (!(typeResource in game.resources)) ? console.log("Invalid resource") : game.resources[typeResource] += amount;
-  return chek;
-}
+// function addResource(typeResource, amount) {
+//   if (typeof typeResource !== 'string' || !(typeResource in game.resources)){
+//     console.log("Invalid resource");
+//   } else {
+//     typeResource === 'gold' ? game.resources.gold += amount : game.resources.lumber += amount
+//   }
+// }
 
-console.log(addResource('gold', 60));
-console.log(addResource('lumber', 90));
-console.log(addResource('stone', 12));
+// console.log('Добавление дерева ' + addResource('lumber', 1))
+// console.log('Добавление золота ' + addResource('gold', 2))
+// console.log('Ошибка добавления ' + addResource(1, 1))
+
+// console.log('Добавление дерева ' + game.resources.gold)
+// console.log('Добавление золота ' + game.resources.lumber)
