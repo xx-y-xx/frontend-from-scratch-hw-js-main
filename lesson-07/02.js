@@ -14,7 +14,10 @@
 // console.log(isNumeric(" ")) // Ожидаемый результат: false
 
 function isNumeric(str) {  
-  str.trim()
-  const conversionNumber = +str; 
-  return !Number.isNaN(conversionNumber)
+  return str.trim() !== '' && !Number.isNaN(+str)
 }
+console.log(isNumeric("123")) // Ожидаемый результат: true
+console.log(isNumeric("12.3")) // Ожидаемый результат: true
+console.log(isNumeric("123abc")) // Ожидаемый результат: false
+console.log(isNumeric("abc")) // Ожидаемый результат: false
+console.log(isNumeric(" ")) // Ожидаемый результат: false
