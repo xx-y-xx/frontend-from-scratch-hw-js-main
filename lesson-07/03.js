@@ -10,5 +10,16 @@
 */
 
 function truncate(str, maxLength) {
-  // your code
+  return maxLength < str.length ? `${str.slice(0,maxLength)}...`: str;
 }
+
+/*🔹
+function truncate(str, maxLength) {
+  if (str.length > maxLength) {
+//🔥 Если maxLength = 20, то slice(0, maxLength) обрежет 20 символов + ещё добавит ..., что в итоге выйдет за maxLength. Поэтому (maxLength - 3)
+    return str.slice(0, maxLength - 3) + '...';
+  } 
+  return str;
+}
+*/
+// console.log(truncate('Вот, что мне действительно нравится в этом', 10))

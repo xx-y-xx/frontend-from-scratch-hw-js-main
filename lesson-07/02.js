@@ -21,3 +21,9 @@ console.log(isNumeric("12.3")) // Ожидаемый результат: true
 console.log(isNumeric("123abc")) // Ожидаемый результат: false
 console.log(isNumeric("abc")) // Ожидаемый результат: false
 console.log(isNumeric(" ")) // Ожидаемый результат: false
+
+/* 🔥 Лучший вариант кода
+function isNumeric(str) {
+    return str.trim() !== "" && !isNaN(str) && Number.isFinite(Number(str));
+}
+*/
