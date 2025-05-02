@@ -70,7 +70,7 @@ clearCartButton.addEventListener('click', function () {
 // Твой код:
 petShop.addEventListener('click', function (event) {
   if (event.target.classList.contains('pet')) {
-    messageBox.textContent = ''
+    messageBox.textContent = '' // всегда сначала очищаем сообщение
 
     if (cart.length < 3) {
       // можно добавлять
