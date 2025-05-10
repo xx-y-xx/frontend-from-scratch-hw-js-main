@@ -31,11 +31,11 @@ const filter = (array, callback) => {
 
   for (let i = 0; array.length > i; i++) {
     if (callback(array[i])) {
-      resultArray.push(array[i])
+      resultArray.push(array[i], index)
     }
   }
   return resultArray;
 }
-function callback(element) {
+function callback(element, index) {
   return element % 2 !== 0
 }
