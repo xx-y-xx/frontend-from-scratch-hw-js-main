@@ -30,12 +30,12 @@ const filter = (array, callback) => {
   const resultArray = [];
 
   for (let i = 0; array.length > i; i++) {
-    if (callback(array[i], index)) {
+    if (callback(array[i], i)) { //уже определил переменную i в цикле, поэтому ошиибки не будет
       resultArray.push(array[i])
     }
   }
   return resultArray;
 }
-function callback(element) {
+function callback(element, index) {
   return element % 2 !== 0
-}
+}``
