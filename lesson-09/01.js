@@ -30,12 +30,12 @@ const filter = (array, callback) => {
   const resultArray = [];
 
   for (let i = 0; array.length > i; i++) {
-    if (callback(array[i])) {
-      resultArray.push(array[i], index)
+    if (callback(array[i], index)) {
+      resultArray.push(array[i])
     }
   }
   return resultArray;
 }
-function callback(element, index) {
+function callback(element) {
   return element % 2 !== 0
 }
